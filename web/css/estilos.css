@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* ----------- Encabezado ----------- */
+header {
+    background: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px #00000012;
+}
+
+.marca {
+    color: #0d6efd;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.marca a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.usuario {
+    text-align: right;
+    font-size: 14px;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ----------- Botones ----------- */
+.boton {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 7px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.boton.icono {
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+.boton.secundario {
+    background: #6c757d;
+}
+
+.boton.secundario:hover {
+    background: #5c636a;
+}
+
+.boton.peligro {
+    background: #dc3545;
+}
+
+.boton.peligro:hover {
+    background: #bb2d3b;
+}
+
+.boton.icono.warning {
+    outline: 1px solid #ffc107;
+    outline-offset: -1px;
+}
+
+/* ----------- Encabezado de sección ----------- */
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.encabezado-seccion h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px #0000000d;
+}
+
+/* ----------- Búsqueda ----------- */
+.busqueda {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.busqueda input[type="text"] {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.busqueda label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.mensaje {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.mensaje.exito {
+    background: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.mensaje.error {
+    background: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 14px 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    font-size: 13px;
+}
+
+td.vacio {
+    text-align: center;
+    color: #64748b;
+    padding: 30px 10px;
+}
+
+.acciones {
+    white-space: nowrap;
+}
+
+.form-linea {
+    display: inline;
+}
+
+.inactivo {
+    color: #64748b;
+}
+
+/* ----------- Formulario ----------- */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo.completo {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: white;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.requerido {
+    color: #dc3545;
+}
+
+.acciones-form {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .usuario {
+        text-align: left;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+}
+

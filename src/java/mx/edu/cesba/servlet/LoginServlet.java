@@ -4,6 +4,7 @@ package mx.edu.cesba.servlet;
 
 
 import java.io.IOException;
+import mx.edu.cesba.UsuarioDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

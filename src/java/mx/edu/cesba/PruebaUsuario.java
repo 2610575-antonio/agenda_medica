@@ -1,6 +1,6 @@
 
 package mx.edu.cesba;
-import mx.edu.cesba.servlet.UsuarioDAO;
+
 
 public class PruebaUsuario {
     

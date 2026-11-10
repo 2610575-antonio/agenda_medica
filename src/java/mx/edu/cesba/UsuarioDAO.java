@@ -1,10 +1,10 @@
-package mx.edu.cesba.servlet;
+package mx.edu.cesba;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import mx.edu.cesba.Usuario;
-import mx.edu.cesba.Conexion;
+//import mx.edu.cesba.Usuario;
+//import mx.edu.cesba.Conexion;
 
 import org.mindrot.jbcrypt.BCrypt;
 

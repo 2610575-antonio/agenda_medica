@@ -1,6 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="mx.edu.cesba.Permisos"%>
 <%
-   
+  
       //Verificar que exista una sesión iniciada 
     String usuario = (String) session.getAttribute("usuario");
 
@@ -27,7 +28,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Médico - Panel Principal</title>
+    <title>Sistema Médico | Panel Principal</title>
 
     <style>
         * {
@@ -153,14 +154,15 @@
 <body>
 
 <header>
-    <div class="logo">
-        Medical System
+    <div class="marca">
+       &#9764; Agenda Médica
     </div>
 
     <div class="usuario">
-        Usuario: <strong><%= nombre %></strong><br>
-        Rol: <%= rol %><br>
-        <a href="logout" class="cerrar-sesion">Cerrar sesión</a>
+        <strong><%= nombre %></strong><br>
+        Usuario: <%= usuario %> | Rol: <%= rol %>
+        <br><br>
+        <a class="boton"  href="LogoutServlet">Cerrar sesión</a>
     </div>
 </header>
 
@@ -172,17 +174,21 @@
 
     <section class="tarjetas">
 
+        <% if (Permisos.puede(rol, Permisos.PACIENTES)) {%>
         <article class="tarjeta">
             <h3>Pacientes</h3>
             <p>Registro y administración de los datos de los pacientes.</p>
-            <a class="boton" href="paciente.jsp">Ingresar</a>
+            <a class="boton" href="PacienteServlet">Abrir</a>
         </article>
-
+        <% } %>
+        
+        <% if (Permisos.puede(rol, Permisos.MEDICOS)) {%>
         <article class="tarjeta">
             <h3>Médicos</h3>
             <p>Administración de los médicos y sus datos profesionales.</p>
-            <a class="boton" href="medico.jsp">Ingresar</a>
+            <a class="boton" href="MedicoServlet">Abrir</a>
         </article>
+        <% } %>
 
         <article class="tarjeta">
             <h3>Agenda de citas</h3>
