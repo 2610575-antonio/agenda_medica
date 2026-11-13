@@ -43,6 +43,10 @@ public class Permisos {
         Set<String> modulos = PERMISOS.get(rol.toUpperCase());
         return modulos != null && modulos.contains(modulo);
     }
+    
+    public static boolean veTodasLasCitas(String rol) {
+        return "ADMIN".equals(rol) || "RECEPCION".equals(rol);
+    }
 }
     
 

@@ -193,7 +193,7 @@
         <article class="tarjeta">
             <h3>Agenda de citas</h3>
             <p>Programación de horarios, citas y diagnóstico del médico.</p>
-            <a class="boton" href="agendar.jsp">Ingresar</a>
+            <a class="boton" href="CitaServlet">Abrir</a>
         </article>
 
         <article class="tarjeta">

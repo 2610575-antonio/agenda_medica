@@ -1,0 +1,89 @@
+/* Estilos extra para la agenda de citas.
+   Se usa junto con estilos.css */
+
+.subtitulo-fecha {
+    margin: 6px 0 0;
+    color: #475569;
+    font-size: 16px;
+}
+
+/* Botones para cambiar de día */
+.navegacion-dias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+/* Filtros de la agenda */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 12px 16px;
+    margin-bottom: 18px;
+}
+
+.filtros .campo {
+    min-width: 180px;
+}
+
+/* Botón de confirmar */
+.boton.exito {
+    background: #15803d;
+}
+
+.boton.exito:hover {
+    background: #116530;
+}
+
+/* Etiquetas de estado */
+.estado {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.estado.programada {
+    background: #dfeaff;
+    color: #0b3f99;
+}
+
+.estado.confirmada {
+    background: #d9f3e8;
+    color: #0b5b45;
+}
+
+.estado.atendida {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.estado.no_asistio {
+    background: #fff0d6;
+    color: #8a5300;
+}
+
+.estado.cancelada {
+    background: #fbdde0;
+    color: #8a1f2b;
+}
+
+/* El área de texto usa el mismo aspecto que los demás campos */
+.campo textarea {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: white;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.campo textarea:focus-visible {
+    outline: 3px solid #1677ff66;
+    outline-offset: 2px;
+}
